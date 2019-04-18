@@ -54,6 +54,12 @@ public class StringStackTest
     @Test
     public void testPushPop() throws Exception
     {
+        s.push("Daniel");
+        s.push("Stephany");
+        s.pop();
+        s.pop();
+        boolean var = s.isEmpty();
+        assertTrue(var);
     }
     
     /**
