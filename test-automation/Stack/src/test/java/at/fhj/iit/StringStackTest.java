@@ -78,4 +78,13 @@ public class StringStackTest
         boolean var = s.isEmpty();
         assertFalse(var);
     }
+    
+    //push one element onto the stack, then pop it and check if it is still the same element
+    @Test
+    public void testPushPop3() throws Exception
+    {
+        s.push("1");
+        String var = s.pop();
+        assertTrue(var.contentEquals("1"));
+    }
 }
