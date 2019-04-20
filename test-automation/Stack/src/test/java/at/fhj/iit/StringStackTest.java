@@ -66,4 +66,16 @@ public class StringStackTest
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
     
+    //push 3 elements onto the stack, remove 2 and check if its not empty
+    @Test
+    public void testPushPop2() throws Exception
+    {
+        s.push("1");
+        s.push("2");
+        s.push("3");
+        s.pop();
+        s.pop();
+        boolean var = s.isEmpty();
+        assertFalse(var);
+    }
 }
