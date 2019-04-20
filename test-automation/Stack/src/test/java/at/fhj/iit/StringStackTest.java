@@ -87,4 +87,23 @@ public class StringStackTest
         String var = s.pop();
         assertTrue(var.contentEquals("1"));
     }
+    
+    //push multiple elements onto the stack and check if
+    //they are popped from it in the right order
+    @Test
+    public void testPushPopOrder() throws Exception
+    {
+        s.push("1");
+        s.push("2");
+        s.push("3");
+        s.push("4");
+        String var = s.pop();
+        assertTrue(var.contentEquals("4"));
+        var = s.pop();
+        assertTrue(var.contentEquals("3"));
+        var = s.pop();
+        assertTrue(var.contentEquals("2"));
+        var = s.pop();
+        assertTrue(var.contentEquals("1"));
+    }
 }
