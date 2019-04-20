@@ -106,4 +106,12 @@ public class StringStackTest
         var = s.pop();
         assertTrue(var.contentEquals("1"));
     }
+    
+    //use pop method even though the stack is empty
+    //and check if an exception is thrown
+    @Test(expected = IllegalStateException.class)
+    public void testPopEmptyStack() throws Exception
+    {
+        s.pop();
+    }
 }
