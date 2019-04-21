@@ -65,6 +65,12 @@ public class StringStackTest
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
+     
+    @Test(expected = IllegalArgumentException.class)
+    public void testWrongSetup() throws Exception
+    {
+        s = new StringStack(0);
+    }
     
     //push 3 elements onto the stack, remove 2 and check if its not empty
     @Test
